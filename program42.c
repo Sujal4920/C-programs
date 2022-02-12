@@ -5,7 +5,7 @@ int main()
 {
     char s1[50];
     char s2[50];
-    char s3[]="is a friend of";
+    char s3[]="is friend of";
     gets(s1);
     gets(s2);
     strcat(s1,strcat(s3,s2));
