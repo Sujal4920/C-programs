@@ -1,16 +1,24 @@
+//program to count palindrome number between given range
 #include <stdio.h>
 int main()
 {
-    int n, i, j;
-    scanf("%d", &n);
-    for (j = 1; j <= n; j++)
+    int min,max,i,a,temp,rev,count=0;
+    scanf("%d %d",&min,&max);
+    for(i=min;i<=max;i++)
     {
-        for (i = 2; i <= j; i++)
-            if (j % i == 0)
-                break;
-
-        if (i == j)
-            printf("%d\n", j);
+      a=i;
+      temp=a;
+      rev=0;
+      while(a!=0)
+      {
+        rev=rev*10+(a%10);
+        a=a/10;
+      }
+      if(temp==rev)
+      {
+        count++;
+      }
     }
+     printf("%d",count);
     return 0;
 }

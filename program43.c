@@ -1,25 +1,24 @@
 #include<stdio.h>
 int verifyPrime(int n){
-  int i,T=0;
-  for(i=2;i<=n/2;i++)
+   int i,m;
+   m=n;
+  for(i=2;i<n;i++)
   {
     if(n%i==0)
-    T++;
-    break;
+      break;
   }
-  if(T!=0)
-  {
+  if(n==i)
+  return 1;
+  else
   return 0;
-  }
-  else{
-    return 1;
-  }
 }
 int main()
 {
-    int n,p;
+    int n,m,p;
     scanf("%d",&n);
-    p=verifyPrime(n);
+    for(int i=1;i<=n;i++){
+      scanf("%d",&m); 
+    p=verifyPrime(m);
     if(p==1)
     printf("prime");
     else
