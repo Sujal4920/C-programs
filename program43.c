@@ -1,7 +1,6 @@
 #include<stdio.h>
 int verifyPrime(int n){
-   int i,m;
-   m=n;
+   int i;
   for(i=2;i<n;i++)
   {
     if(n%i==0)
@@ -23,4 +22,6 @@ int main()
     printf("prime");
     else
     printf("not prime");
+}
+return 0;
 }
